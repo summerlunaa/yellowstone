@@ -32,11 +32,14 @@ header {
 main {
   padding: 15px;
 }
+div{
+  width:100%;
+}
 
 #image{
   width:500px;
   height:500px;
-  
+  object-fit:cover;
 }
 
 h1 {
@@ -60,6 +63,10 @@ a {
 }
 #title {
   font-size: 20px;
+}
+#txt{
+  width:100%;
+  word-break: break-all;
 }
 
 .date {

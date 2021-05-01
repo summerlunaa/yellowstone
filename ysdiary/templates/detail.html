@@ -19,7 +19,7 @@
                     {{post.pub_date}}
                 </div>
             {%endif%}
-            <p id=txt>{{post.body|linebreaks}}</p>
+            <p id=txt style="word-break: break-all;">{{post.body|linebreaks}}</p>
             {% if post.photo %}
                 <img src="{{ post.photo.url }}" style="width:500px; height:500px; object-fit:contain;">
             {% endif %}
