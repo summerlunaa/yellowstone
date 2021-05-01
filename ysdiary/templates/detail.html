@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf=8">
+    <title>YELLOW STONE PAGE</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'style.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1>{{post.title}}</h1>
+    </header>
+
+    <main>
+        <div class="posts">
+            {% if post.pub_date %}
+                <div class="date">
+                    {{post.pub_date}}
+                </div>
+            {%endif%}
+            <p id=txt>{{post.body|linebreaks}}</p>
+        </div>
+        <br>
+        <a href="{% url 'edit' index=post.pk%}">수정하기</a>
+        <br><br>
+        <a href="{% url 'delete' pk=post.pk %}">삭제하기</a>
+        <br><br>
+        <a href="{% url 'home'%}">Home으로 돌아가기</a>
+    </main>
+</body>
+
+
+

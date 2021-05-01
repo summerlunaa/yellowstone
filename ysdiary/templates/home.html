@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="kor">
+<head>
+    <meta charset="utf=8">
+    <title>YELLOW STONE PAGE</title>
+    <link rel="stylesheet" type="text/css" href="{static 'style.css' %}">
+</head>
+
+<body>
+    <header> 
+        <h1>YELLOW STONE BLOG</h1>
+    </header>
+    
+    <main>
+        <br>
+        <a id=new href="{% url 'new' %}">글 작성하기</a>
+        <br><br>
+        {% for post in posts_list %}
+            <p class=date>{{post.pub_date}}</p>
+            <a id=title href="{% url 'detail' index=post.pk %}">{{post.title}}</a>
+            <br>
+            <hr style="border: gray 1px;">
+        {% endfor %}
+    </main>
+
+</body>
+
+</html>
