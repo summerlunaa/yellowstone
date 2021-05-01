@@ -16,7 +16,7 @@ def new(request):
             post = form.save(commit=False)
             post.author = request.user
             post.published_date = timezone.now()
-            post.photo = request.FILES['photo']
+            post.photo = request.POST.get('photo', '')
             post.save()
             return redirect('home')
     else: 
@@ -35,7 +35,7 @@ def edit(request, index):
             post = form.save(commit=False)
             post.author = request.user
             post.published_date = timezone.now
-            post.photo = request.FILES['photo']
+            post.photo = request.POST.get('photo', '')
             post.save()
             return redirect('detail', index=post.pk)
     else:
