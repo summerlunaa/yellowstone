@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf=8">
         <title>New Post</title>
-        <link rel="stylesheet" type="text/css" href="{%static 'style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{%static 'newstyle.css' %}">
     </head>
 
     <body>
@@ -13,14 +13,18 @@
         </header>
         
         <main>
-            <form id=form method='POST' class=post-form>
+            <form id=form method='POST' class="post-form" enctype="multipart/form-data" action="">
                 {% csrf_token %}
-                {{form.as_p}}
+                title <input id=title type="text" name="title"><br><br>
+                content<br><br>
+                <textarea id=text name="body" cols="40" row="30"></textarea><br><br>
+                <input type="file" name="photo">
+                <br><br>
                 <button type="submit">저장하기</button>
             </form>
 
-            <br><br>
-            <a href="{% url 'home'%}">Home으로 돌아가기</a>
+            <br>
+            <a href="{% url 'home'%}"><button>Home</button></a>
         </main>
     </body>
 </html>

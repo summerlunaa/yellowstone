@@ -6,6 +6,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'CookieRun-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 html,
 body {
@@ -16,11 +22,11 @@ body {
   line-height: 80%;
 }
 header {
-  background-color: rgb(255, 94, 115);
+  background-color: rgb(255, 226, 94);
   height: 100px;
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 10px 40px;
 }
 
 main {
@@ -36,47 +42,20 @@ h1 {
   font-family: 'CookieRunOTF-Bold';
 }
 main {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "CookieRun-Regular";
 }
 
 p {
   line-height: 120%;
 }
-a {
-  text-decoration: none;
-  color: hotpink;
-}
 #title {
   font-size: 20px;
-}
-#new {
-  color: pink;
-  font-size: 22px;
-  border: pink 1px solid;
-  border-radius: 3px;
-  padding: 3px;
 }
 
 .date {
   font-size: 12px;
 }
 
-#feel {
-  font-size: 15px;
-  color: rgb(100, 100, 100);
-  line-height: 80%;
-}
-
-#score {
-  font-size: 15px;
-  color: rgb(100, 100, 100);
-  line-height: 80%;
-}
-
-h3 {
-  color: powderblue;
-  font-size: 25px;
-}
 
 #form {
   font-family: "Noto Sans KR", sans-serif;
@@ -84,26 +63,35 @@ h3 {
 }
 
 input {
-  background-color: rgb(255, 224, 229);
+  background-color: rgb(253, 236, 158);
 }
 textarea {
-  background-color: rgb(255, 224, 229);
+  background-color: rgb(253, 236, 158);
 }
 select {
-  background-color: rgb(255, 224, 229);
+  background-color: rgb(253, 236, 158);
+}
+#title{
+  width:450px;
+  height: 20px;
+}
+#text{
+  resize : none;
+  width:500px;
+  height: 300px;
 }
 
 button {
   margin: 0;
   padding: 0.5rem 1rem;
 
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "CookieRun-Regular";
   font-size: 1rem;
   font-weight: 200;
   text-align: center;
   text-decoration: none;
 
-  background-color: pink;
+  background-color: rgb(255, 226, 94);
   color: rgb(100, 100, 100);
   display: inline-block;
   width: auto;

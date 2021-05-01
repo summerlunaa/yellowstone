@@ -3,24 +3,26 @@
 <html lang="kor">
 <head>
     <meta charset="utf=8">
-    <title>YELLOW STONE PAGE</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>YELLOW STONE PAGE </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'homestyle.css' %}">
 </head>
 
 <body>
     <header> 
         <h1>YELLOW STONE BLOG</h1>
+        <img src = "https://freepikpsd.com/wp-content/uploads/2019/10/baby-lion-png-8-Images-PNG-Transparent-1024x982.png" style="padding : 100px; height :100px;"/>
+        <a id=new href="{% url 'new' %}">글 작성하기</a>
     </header>
     
     <main>
         <br>
-        <a id=new href="{% url 'new' %}">글 작성하기</a>
-        <br><br>
+        
         {% for post in posts_list %}
             <p class=date>{{post.pub_date}}</p>
             <a id=title href="{% url 'detail' index=post.pk %}">{{post.title}}</a>
+            <p id=txt>{{post.body|truncatechars:50}}</p>
             <br>
-            <hr style="border: gray 1px;">
+            <hr style="border:solid gray 1px;">
         {% endfor %}
     </main>
 
